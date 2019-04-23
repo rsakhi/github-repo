@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { OrgnaisationComponent } from './component/orgnaisation/orgnaisation.component';
+import { AnalyticsComponent } from './component/analytics/analytics.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'orgnaisation-detail',
+    redirectTo: 'organization-detail',
     pathMatch: 'full'
   },
 
   {
     path: "organization-detail",
-    component: OrgnaisationComponenent
+    component: OrgnaisationComponent 
   },
   {
     path: "analytics",
     component: AnalyticsComponent
   }
-];
 ];
 
 
