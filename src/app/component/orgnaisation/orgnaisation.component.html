@@ -50,33 +50,78 @@
     </div>
 
     <div class="team-cart">
-      team
+      <h1>
+        Team deails
+      </h1>
+      <div class="member-details" *ngFor="let member of members | paginate: { itemsPerPage: 3, currentPage: p }">
+        <div class='avaitr'>
+          <img src={{member.avatar_url}} class="user-img">
+        </div>
+        <div class=data>
+            pp
+        </div>
+      </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
     </div>
   </div>
+
   <div class="organisation-details">
-    <h3>
-        Orgnaisation Details
-    </h3>
-    <div>
-      <div class="feild">  
-        <label>Orgnaisation</label>
-        <div class="orgnaisation">Orgnaisation </div>
-      </div>
-      <div class="feild">  
-        <label>Orgnaisation</label>
-        <div class="orgnaisation">Orgnaisation </div>
-      </div>
-      <div class="feild">  
-        <label>Orgnaisation</label>
-        <div class="orgnaisation">Orgnaisation </div>
-      </div>
-      <div class="feild">  
-        <label>Orgnaisation</label>
-        <div class="orgnaisation">Orgnaisation </div>
-      </div>
-      <div class="feild">  
-        <label>Orgnaisation</label>
-        <div class="orgnaisation">Orgnaisation </div>
-      </div>
-    </div>
+      <div class="form-area">
+            <div class="card-body form-card">
+              <div class="card-title">
+                <h5>Organization Details</h5>
+              </div>
+              <div class="form">
+                <div class="form-row">
+                  <div class="col-5">
+                    <div class="form-group">
+                      <label for="name">Organization</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="uname">Username</label>
+                      <input type="text" class="form-control" id="uname">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="text" class="form-control" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" class="form-control" id="address">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="city" placeholder="Melbourne">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="country">Country</label>
+                      <input type="text" class="form-control" id="country" placeholder="Australia">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="pcode">Postal Code</label>
+                      <input type="text" class="form-control" id="pcode" placeholder="Zip Code">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
   </div>

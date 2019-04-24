@@ -7,6 +7,8 @@ import { OrgnaisationComponent } from './component/orgnaisation/orgnaisation.com
 import { AnalyticsComponent } from './component/analytics/analytics.component';
 import {OrganisationDetailsService} from "./services/organisation-details.service";
 import {AnalyticsService} from "./services/analytics.service";
+import {NgxPaginationModule} from 'ngx-pagination'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {AnalyticsService} from "./services/analytics.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [OrganisationDetailsService, AnalyticsService],
   bootstrap: [AppComponent]

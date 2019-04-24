@@ -14,7 +14,12 @@
     box-shadow: var(--box-shadow);
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: .5rem; 
+}
+.details-cart, .team-cart {
     height: 37rem;
+}
+.organisation-details {
+    height: 25rem;
 }
 
 .details-cart  {
@@ -69,4 +74,39 @@
 
 .repo-footer .item {
     margin: 2rem
+}
+
+.member-details {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem;
+    padding: 2rem;
+    border-bottom: .1rem solid var(--color-grey-dark-2)
+}
+
+.avaitr {
+    margin: 0 4rem 0 2rem;
+}
+
+.app-pagination{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 8rem;
+}
+
+.form-area {
+    font-size: 1.4rem;
+    max-height: 45vh;
+    margin: 3px 0 0 0;
+    width: 100%;
+}
+
+.form-area .form-card {
+    padding-bottom: 4px; 
+}
+
+.user-img {
+    width: 4rem;
+    border-radius: 50%; 
 }

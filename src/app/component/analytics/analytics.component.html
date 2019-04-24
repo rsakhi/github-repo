@@ -1,3 +1,35 @@
-<p>
-  analytics works!
-</p>
+<div class="container analytics-container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Repos of Angular Organizations</h4>
+            <h6 class="card-subtitle text-muted">These are Angular Repos</h6>
+            <table class="table table-striped">
+              <thead class="thead-light">
+              <tr>
+                <th class="first-row">Id</th>
+                <th class="first-row">Name</th>
+                <th class="first-row">Url</th>
+                <th class="first-row">Watchers</th>
+                <th class="first-row">Open issues</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor = "let repo of repoDetails | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>{{repo.id}}</td>
+                <td>{{repo.name}}</td>
+                <td>{{repo.git_url}}</td>
+                <td>{{repo.watchers}}</td>
+                <td>{{repo.open_issues_count}}</td>
+              </tr>
+              </tbody>
+              <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+            </table>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="app-container">
 	<nav class="sidebar">
 		<header class="sidebar-hader">
 			<div class="logo">
@@ -13,13 +13,14 @@
 				Crative Gmp
 			</div>
 		</header>
-			<ul>
-					<li><a href="#"> organisation profile</a>
-					</li>
-
-					<li><a href="#"> Analytics</a>
-					</li>
-			</ul>
+			 <div [routerLinkActive]="['active']">
+            <span class="float-left icons"><i class="fa fa-lg fa-user-o" aria-hidden="true"></i></span>
+            <a routerLink="/organization-detail">ORGANIZATION PROFILE</a>
+          </div>
+          <div [routerLinkActive]="['active']">
+            <span class="float-left icons"><i class="fa fa-lg  fa-bars" aria-hidden="true"></i></span>
+            <a routerLink="/analytics">ANALYTICS</a>
+          </div>
 	</nav>
 	<div class="organisation-profile">
 		<router-outlet></router-outlet>

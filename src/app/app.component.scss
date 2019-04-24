@@ -1,4 +1,4 @@
-.container {
+.app-container {
     display: flex;
     /* margin: 1rem auto; */
     box-shadow: 3px 0px 2px 0px rgba(194, 183, 183, 0.3);
@@ -30,7 +30,7 @@
 }
 
 a:link {
-    margin: 0 5rem 1rem;; 
+    margin: 0 4rem 1rem;; 
     text-decoration: none;
     text-transform: uppercase;
 }

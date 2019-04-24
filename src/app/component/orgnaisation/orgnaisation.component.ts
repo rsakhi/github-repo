@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrganisationDetailsService } from 'src/app/services/organisation-details.service';
 
 @Component({
   selector: 'app-orgnaisation',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrgnaisationComponent implements OnInit {
 
-  constructor() { }
+  members:any = []
+  p: number = 1;
+  constructor( private organizationsService: OrganisationDetailsService) { }
 
   ngOnInit() {
+    this.organizationsService.getMembersDetails().subscribe(res => {
+      debugger
+      this.members = res;
+    })
   }
-
 }

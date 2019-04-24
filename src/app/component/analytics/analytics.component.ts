@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from 'src/app/services/analytics.service';
 
 @Component({
   selector: 'app-analytics',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalyticsComponent implements OnInit {
 
-  constructor() { }
+  repoDetails:any = [];
+  p: number = 1;
+  constructor(private analyticsService :AnalyticsService) { }
 
   ngOnInit() {
+    this.analyticsService.getRepos().subscribe(res => {
+      this.repoDetails = res;
+    })
   }
 
 }
