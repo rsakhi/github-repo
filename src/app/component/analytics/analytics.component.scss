@@ -1,6 +1,13 @@
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em;
+
 .analytics-container {
-    margin: 20px 0 20px 10px;
-    padding-left: 0 
+    margin: 20px 0 0px 10px;
+    padding-left: 0;
+    font-size: 1.2rem
 }
 
 .table {
@@ -11,6 +18,36 @@
     border-top: 0px
 }
 
-.pagination {
-    width: 1rem;
+.pagination1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.container {
+    max-width: 740px;
+    @media (min-width: 576px){
+        max-width: 740;
+    }
+}
+
+.url-name {
+    display: block;
+    @media only screen and (max-width: $bp-medium) {
+       max-width: 20rem;
+    } 
+    @media only screen and (max-width: $bp-small) {
+        display: none
+    }        
+}
+
+.url-link {
+    display: none;
+    @media only screen and (max-width: $bp-small) {
+        display: block;
+    } 
+}
+
+.card {
+    // height: 95vh;
 }

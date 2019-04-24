@@ -1,42 +1,95 @@
-.app-container {
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+.app-container{
     display: flex;
-    /* margin: 1rem auto; */
     box-shadow: 3px 0px 2px 0px rgba(194, 183, 183, 0.3);
     min-height: 100vh;
 }
 
-
+.app-header {
+    display: none;
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        display: flex;
+        font-size: 1rem;
+    }
+}
+.containt {
+    width: 100%;
+    @media only screen and (max-width: $bp-small) {
+        width: 40%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        width: 30%;
+    }
+}
 .sidebar {
     flex: 0 0 25%;
     font-size: 1.4rem;
     color: grey;
     margin-top: 2rem;
-    
+    @media only screen and (max-width:  $bp-medium) {
+        display: none;
+    }
 }
 
-.sidebar-hader {
+.links {
+    font-size: 1.2rem;
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+    }
+}
+.sidebar-hader, .app-header {
     margin: 0 3rem 1rem;
     padding: 1rem;
-    border-bottom: .15rem solid var(--color-grey-dark-2);
     text-transform: uppercase;
-    display: flex;
     flex-direction: row;
     align-items: center;
+    .logo {
+        width: 5rem;
+    }
+}
+.sidebar-hader {
     font-size: 1.6rem;
+    display: flex;
+    border-bottom: .15rem solid var(--color-grey-dark-2);
+
 }
 
-.sidebar-hader .logo {
-    width: 5rem;
-}
-
-a:link {
-    margin: 0 4rem 1rem;; 
+a:link,
+a:visited{
+    margin: 1rem 4rem 1rem; 
     text-decoration: none;
     text-transform: uppercase;
-}
+    color: black;
+    @media only screen and (max-width:  $bp-medium) {
+        margin: 0 1rem 1rem;;
+    }
 
+
+}
 .organisation-profile {
     flex: 1;   
+    background-color: var(--color-grey-dark-2);
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.active {
     background-color: var(--color-grey-dark-2);
 }
 

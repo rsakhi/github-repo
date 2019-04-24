@@ -1,3 +1,9 @@
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
 .organisation-profile {
     flex: 1;   
     background-color: var(--color-grey-dark-2);
@@ -5,18 +11,26 @@
 
 .repo-details, .organisation-details {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    flex-direction: row;
+    @media only screen and (max-width: $bp-smallest) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .details-cart, .team-cart, .organisation-details{
     background-color: #ffffff;
-    margin: 1rem 3rem; 
+    margin: 1rem 1rem; 
     box-shadow: var(--box-shadow);
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: .5rem; 
+    border-radius: .5rem;
 }
 .details-cart, .team-cart {
     height: 37rem;
+    @media only screen and (max-width: $bp-smallest) {
+        height: 42rem;
+    }
 }
 .organisation-details {
     height: 25rem;
@@ -55,7 +69,10 @@
 }
 
 .repo-header .description {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1.1rem;
+    }
 }
 .repo-header .title {
     font-size: 1.2rem; 
@@ -79,9 +96,11 @@
 .member-details {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin: 1rem;
     padding: 2rem;
-    border-bottom: .1rem solid var(--color-grey-dark-2)
+    border-bottom: .1rem solid var(--color-grey-dark-2);
+    text-transform: capitalize;
 }
 
 .avaitr {
@@ -109,4 +128,8 @@
 .user-img {
     width: 4rem;
     border-radius: 50%; 
+}
+
+.card-title {
+    padding: 1rem 0 0 1rem;
 }

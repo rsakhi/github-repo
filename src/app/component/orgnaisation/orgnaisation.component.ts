@@ -14,7 +14,6 @@ export class OrgnaisationComponent implements OnInit {
 
   ngOnInit() {
     this.organizationsService.getMembersDetails().subscribe(res => {
-      debugger
       this.members = res;
     })
   }

@@ -50,15 +50,15 @@
     </div>
 
     <div class="team-cart">
-      <h1>
-        Team deails
-      </h1>
+        <div class="card-title">
+          <h5>Team Members</h5>
+        </div>
       <div class="member-details" *ngFor="let member of members | paginate: { itemsPerPage: 3, currentPage: p }">
         <div class='avaitr'>
           <img src={{member.avatar_url}} class="user-img">
         </div>
         <div class=data>
-            pp
+            {{member.login}}
         </div>
       </div>
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
